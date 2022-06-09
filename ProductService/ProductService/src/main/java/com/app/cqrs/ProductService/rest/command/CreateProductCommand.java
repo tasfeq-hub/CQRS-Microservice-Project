@@ -1,4 +1,4 @@
-package com.app.cqrs.ProductService.command;
+package com.app.cqrs.ProductService.rest.command;
 
 import lombok.Builder;
 import lombok.Data;

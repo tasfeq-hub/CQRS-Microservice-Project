@@ -1,4 +1,4 @@
-package com.app.cqrs.ProductService.command;
+package com.app.cqrs.ProductService.rest.command;
 
 import com.app.cqrs.ProductService.event.ProductCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;

@@ -1,4 +1,4 @@
-package com.app.cqrs.ProductService.rest.model;
+package com.app.cqrs.ProductService.rest.command.model;
 
 import java.math.BigDecimal;
 
