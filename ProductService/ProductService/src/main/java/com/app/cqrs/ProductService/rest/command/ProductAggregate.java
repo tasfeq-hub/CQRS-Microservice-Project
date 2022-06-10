@@ -1,6 +1,6 @@
 package com.app.cqrs.ProductService.rest.command;
 
-import com.app.cqrs.ProductService.event.ProductCreatedEvent;
+import com.app.cqrs.ProductService.rest.query.event.ProductCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;

@@ -1,4 +1,4 @@
-package com.app.cqrs.ProductService.event;
+package com.app.cqrs.ProductService.rest.query.event;
 
 import lombok.Data;
 

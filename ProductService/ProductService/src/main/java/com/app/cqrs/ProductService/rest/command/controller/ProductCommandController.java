@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RestController
@@ -23,7 +24,7 @@ public class ProductCommandController {
     }
 
     @PostMapping
-    public String createProduct(@RequestBody ProductRestModel model) {
+    public String createProduct(@Valid @RequestBody ProductRestModel model) {
         String result;
 
         CreateProductCommand createProductCommand = CreateProductCommand.builder()
@@ -33,11 +34,7 @@ public class ProductCommandController {
                 .quantity(model.getQuantity())
                 .build();
 
-        try {
-            result = commandGateway.sendAndWait(createProductCommand);
-        } catch (Exception e) {
-            result = e.getLocalizedMessage();
-        }
+        result = commandGateway.sendAndWait(createProductCommand);
 
         return result;
     }
